@@ -1,0 +1,5 @@
+{
+  "name": "RepoRater AI",
+  "description": "A minimal, AI-powered GitHub repository evaluator that acts as a senior technical reviewer.",
+  "requestFramePermissions": []
+}
