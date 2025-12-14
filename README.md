@@ -12,36 +12,46 @@ A minimal, full-stack GitHub repository evaluator using React, Node.js, and Goog
 
 ### 1. Backend
 
-1.  Navigate to `backend/` (create this folder if you split the files manually, or assume the `backend/index.ts` is in a folder named backend).
-2.  Initialize and install:
+1.  Navigate to `backend/`:
     ```bash
     cd backend
-    npm init -y
-    npm install express cors dotenv axios @google/genai typescript ts-node @types/express @types/cors @types/node
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
     ```
 3.  Create a `.env` file in `backend/`:
     ```
     API_KEY=your_gemini_api_key
+    GEMINI_API_KEY=your_gemini_api_key
     GITHUB_TOKEN=your_github_token
     PORT=3001
     ```
 4.  Run the server:
     ```bash
-    npx ts-node index.ts
+    npm start
     ```
+    The server will run on `http://localhost:3001`
 
 ### 2. Frontend
 
 1.  In the project root:
     ```bash
-    npm create vite@latest . -- --template react-ts
-    npm install lucide-react recharts
+    npm install
     ```
-2.  Replace `src/App.tsx`, `index.html`, etc., with the provided files.
-3.  Run the frontend:
+2.  Run the frontend:
     ```bash
     npm run dev
     ```
+    The frontend will run on `http://localhost:3000` and automatically proxy API requests to the backend.
+
+### 3. Running Both
+
+Open two terminal windows:
+- Terminal 1: `cd backend && npm start`
+- Terminal 2: `npm run dev`
+
+Then open `http://localhost:3000` in your browser.
 
 ## Deployment Guide (Quick)
 
